@@ -1,3 +1,3 @@
-# os-pointers
-C / C++ Pointers
+# CISC 310 - Assignment: os-pointers
 # Andrew Braunschweig
+C / C++ Pointers
