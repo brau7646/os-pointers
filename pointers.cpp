@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     std::cin >> student.l_name;
 
 
-    student.n_assignments = promptInt("Please enter how many assignments were graded: ", 0, 134217728);
+    student.n_assignments = promptInt("Please enter how many assignments were graded: ", 1, 134217727);
     std::cout << "\n";
     int i;
     for (i=0; i < student.n_assignments; i++)
@@ -67,7 +67,7 @@ int promptInt(std::string message, int min, int max)
     {
         std::cout << message;
         std::cin >> toReturn;
-        if (std::cin.fail())
+        if (std::cin.fail() || toReturn < min || toReturn > max)
         {
             std::cin.clear();
             std::cin.ignore(max,'\n');
@@ -94,7 +94,7 @@ double promptDouble(std::string message, double min, double max)
     {
         std::cout << message;
         std::cin >> toReturn;
-        if (std::cin.fail())
+        if (std::cin.fail() || toReturn < min || toReturn > max)
         {
             std::cin.clear();
             std::cin.ignore(max,'\n');
